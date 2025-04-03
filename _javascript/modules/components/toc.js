@@ -5,7 +5,10 @@ const desktopMode = matchMedia('(min-width: 1200px)');
 
 function refresh(e) {
   if (e.matches) {
-    mobile.hidePopup();
+    if (mobile.popupOpened) {
+      mobile.hidePopup();
+    }
+
     desktop.refresh();
   } else {
     mobile.refresh();
@@ -23,6 +26,9 @@ function init() {
   } else {
     mobile.init();
   }
+
+  const $tocWrapper = document.getElementById('toc-wrapper');
+  $tocWrapper.classList.remove('invisible');
 
   desktopMode.onchange = refresh;
 }
