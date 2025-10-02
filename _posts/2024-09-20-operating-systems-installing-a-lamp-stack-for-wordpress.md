@@ -287,7 +287,7 @@ sudo systemctl restart httpd
 
 And that's it! Now, on your virtual machine browser, go to the URL ```http://localhost/phpmyadmin/```. You should get the following page:
 
-![phpmyadmin login screen](./assets/media/phpmyadmin-login-screen.png){: width="400"}
+![phpmyadmin login screen](./assets/media/operating-systems-lamp-stack/phpmyadmin-login-screen.png){: width="400"}
 
 You can login from that screen using username "root" and the root password you created for MariaDB (I still hope you have it remembered!)
 
