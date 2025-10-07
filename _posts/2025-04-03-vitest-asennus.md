@@ -24,45 +24,33 @@ Hakemistoon pitäisi ilmestyä tiedosto "package.json". Jos näin ei käy tai sa
 Aja luomassasi hakemistossa terminaalissa seuraava komento:
 
 ```shell
-npm i -D eslint eslint-config-google eslint-config-prettier prettier
+npm init @eslint/config@latest
 ```
 
-Tällä asennetaan tarvittavat moduulit jotta meillä on käytössä sama sovelluspohja kuin muillakin opintojaksoilla.
+Tällä asennetaan ESLint-moduuli ja konfiguroidaan se projektia varten. Konfiguraatio esittää muutaman kysymyksen, ja voit vastata seuraavasti:
 
-Luo tämän jälkeen hakemistoon tiedosto nimellä ".eslintrc" (ei tiedostopäätettä, tiedoston nimi täsmälleen kuten heittomerkkien välissä on kerrottu), ja kopioi siihen sisällöksi alla oleva koodi:
+```shell
+? What do you want to lint? -> Valitse Javascript
 
-```json
-{
-  "extends": ["google", "prettier"],
-  "parserOptions": {
-    "ecmaVersion": 2020
-  },
+? How would you like to use ESLint? -> To check syntax and find problems
 
-  "env": {
-    "es6": true,
-    "node": true
-  },
+? What type of modules does your project use? -> JavaScript modules (import/export)
 
-  "rules": {
-    "require-jsdoc": "off",
-    "max-len": "off",
-    "padded-blocks": "off",
-    "no-console": "off",
-    "space-unary-ops": "off",
-    "eol-last": "off",
-    "func-names": "off",
-    "no-param-reassign": "off",
-    "linebreak-style": "off",
-    "one-var": "off",
-    "no-inline-comments": "off",
-    "one-var-declaration-per-line": "off",
-    "strict": "off",
-    "spaced-comment": "off"
-  }
-}
+? Which framework does your project use? -> None of these
+
+? Does your project use TypeScript? -> No
+
+? Where does your code run? -> Node (ota valinta pois kohdasta Browser)
+
+The config that you've selected requires the following dependencies:
+
+eslint, @eslint/js, globals
+? Would you like to install them now? › Yes
+
+? Which package manager do you want to use? -> npm
 ```
 
-Nyt sinulla pitäisi olla sovelluksen pohja samanlainen kuin muillakin opintojaksoilla. Tähän lähdetään nyt rakentamaan testausympäristöä ja testejä [Vitest-testausframeworkilla](https://vitest.dev/).
+Nyt sinulla pitäisi olla sovelluksen pohja valmiina testaushommiin. Tähän lähdetään nyt rakentamaan testausympäristöä ja testejä [Vitest-testausframeworkilla](https://vitest.dev/).
 
 # Yksikkötestaus - Vitestin asennus
 
@@ -116,7 +104,7 @@ Muokkauksen jälkeen `package.json` -tiedoston sisällön tulisi näyttää osap
 }
 ```
 
-Testaa nyt ajamalla komento `npm run test`. Jos kaikki on oikein, saat ilmoituksen siitä että testitiedostoja ei löytynyt (esimerkki alla). Lopeta testiajo painamalla `ctrl+c`.
+Testaa nyt ajamalla komento `npm run test`. Jos kaikki on oikein, saat ilmoituksen siitä että testitiedostoja ei löytynyt (esimerkki alla). Lopeta testiajo painamalla `q`.
 
 ```shell
 No test files found. You can change the file name pattern by pressing "p"
@@ -127,41 +115,47 @@ exclude:  **/node_modules/**, **/dist/**, **/cypress/**, **/.{idea,git,cache,out
 
 # Ensimmäinen testi
 
-Luo päähakemiston alle ymäristön testausta varten nimellä `laskin`.
+Luo päähakemiston alle ymäristön testausta varten hakemistot nimellä `laskin` ja `test`.
 
-Lataa ja pura [laskin_koodit.zip](https://tiko.jamk.fi/~hsateila/materiaalit/testaus/laskin_koodit.zip) -tiedosto, jossa on tiedostot `laskin.js` ja `laskin.test.js`. Siirry `laskin`-hakemistoosi (tai miksikä sen nimesit), ja siirrä molemmat tiedostot sinne.
+Lataa ja pura [laskin_koodit.zip](https://tiko.jamk.fi/~hsateila/materiaalit/testaus/laskin_koodit.zip) -tiedosto, jossa on tiedostot `laskin.js` ja `laskin.test.js`. Siirrä `laskin.js` kansioon `laskin` ja `laskin.test.js` kansioon `test`
 
-Purettuasi tiedostot, aja samassa hakemistossa komento `npm run test`. Tulosteen pitäisi näyttää enemmän tai vähemmän tältä:
+Purettuasi ja siirrettyäsi tiedostot paikoilleen, projektin juurihakemistoon ja aja komento `npm run test`. Tulosteen pitäisi näyttää enemmän tai vähemmän tältä:
 
 ```shell
-stdout | laskin/laskin.test.js > Laskimen testaus > Tarkistetaan, että plusLasku-funktio palauttaa oikean summan yhteenlaskulla 1 + 1
+> testaus-cicd@1.0.0 test
+> vitest
+
+
+ DEV  v3.2.4 /Users/hsateila/Opintojaksot/Testaus/testaus-cicd
+
+stdout | tests/laskin.test.js > Laskimen testaus > Tarkistetaan, että plusLasku-funktio palauttaa oikean summan yhteenlaskulla 1 + 1
 1 + 1 = 2
 
- ❯ laskin/laskin.test.js (2 tests | 1 failed) 3ms
-   ✓ Laskimen testaus > Tarkistetaan, että plusLasku-funktio palauttaa oikean summan yhteenlaskulla 1 + 1
+ ❯ tests/laskin.test.js (2 tests | 1 failed) 4ms
+   ✓ Laskimen testaus > Tarkistetaan, että plusLasku-funktio palauttaa oikean summan yhteenlaskulla 1 + 1 1ms
    × Laskimen testaus > Tarkistetaan, että miinusLasku-funktio palauttaa oikean erotuksen vähennyslaskulla 5 - 2 2ms
      → tulos is not defined
 
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
 
- FAIL  laskin/laskin.test.js > Laskimen testaus > Tarkistetaan, että miinusLasku-funktio palauttaa oikean erotuksen vähennyslaskulla 5 - 2
+ FAIL  tests/laskin.test.js > Laskimen testaus > Tarkistetaan, että miinusLasku-funktio palauttaa oikean erotuksen vähennyslaskulla 5 - 2
 ReferenceError: tulos is not defined
  ❯ Laskin.miinusLasku laskin/laskin.js:27:39
-     25|  */
-     26| Laskin.prototype.miinusLasku = function (a, b) {
-     27|   console.log(a + ' - ' + b + ' = ' + tulos);
-       |                                       ^
-     28|   return tulos;
-     29| };
- ❯ laskin/laskin.test.js:10:19
+ ❯ tests/laskin.test.js:13:31
+     11| 
+     12|   it('Tarkistetaan, että miinusLasku-funktio palauttaa oikean erotuksen vähennyslaskulla 5 - 2', function () {
+     13|     const checkSumma = laskin.miinusLasku(5, 2);
+       |                               ^
+     14|     expect(checkSumma).toBe(3);
+     15|   });
 
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
 
 
  Test Files  1 failed (1)
       Tests  1 failed | 1 passed (2)
-   Start at  16:56:03
-   Duration  199ms (transform 12ms, setup 0ms, collect 10ms, tests 3ms, environment 0ms, prepare 30ms)
+   Start at  14:47:16
+   Duration  144ms (transform 13ms, setup 0ms, collect 8ms, tests 4ms, environment 0ms, prepare 33ms)
 ```
 
 Yksi testi onnistui, yksi epäonnistui. Korjaa laskin.js:n koodia niin että myös toinen testi menee läpi, ja aja `npm run test` uudelleen.
