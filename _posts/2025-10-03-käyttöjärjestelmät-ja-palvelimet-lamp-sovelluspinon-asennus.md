@@ -348,7 +348,7 @@ Kun tiedosto on tallennettu. tarkista uudelleen http://127.0.0.1/ virtuaalikonee
 
 WordPress ja graafinen tietokantaliittymä vaativat lisäkirjastoja PHP:lle toimiakseen. Asennetaan nämä seuraavalla komennolla:
 
-```php
+```bash
 sudo apt install php-cli php-curl php-mbstring php-xml php-zip
 ```
 
@@ -380,13 +380,13 @@ Jotta päästään simppelimmin selaimen välityksellä operoimaan tietokannassa
 
 Jotta asennus etenee mukisematta, on tehtävä pieni konfiguraatiomuutos MySQL-tietokantaan. Kirjaudutaan kantaan sisälle komentoriviltä seuraavasti:
 
-```php
+```bash
 mysql -u root -p
 ```
 
 Anna taas tietokannan juurikäyttäjän salasana kun sitä kysytään. Tämän jälkeen MySQL-komentokehotteessa aja seuraava komento:
 
-```php
+```sql
 mysql> UNINSTALL COMPONENT "file://component_validate_password";
 ```
 
@@ -394,7 +394,7 @@ Tämän jälkeen sulje tietokannan kometokehote kirjoittamalla `exit` ja painama
 
 Itse PHP:n asennus onnistuu helpoiten seuraavalla loitsulla, jolla asennetaan samalla myös muutama tarvittava lisämoduuli PHP:n joita ei aiemmin asennettu:
 
-```php
+```bash
 sudo apt install phpmyadmin php-gd php-json
 ```
 
@@ -408,7 +408,9 @@ sudo apt install phpmyadmin php-gd php-json
 
 Asennuksen aikana näkyviin pärähtää melko 80-luvun näköinen asennusruutu (velho).
 
-Ensimmäisenä täytyy valita mikä HTTP-palvelin konfiguroidaan. Valitse apache2.
+Ensimmäisenä täytyy valita mikä HTTP-palvelin konfiguroidaan. Valitse apache2. Tsekkaa kuvasta että välilyöntiä painamalla varmasti valitset apache2 konfigurointia varten.
+
+![phpmyadmin configuration for apache2](./assets/media/operating-systems-lamp-stack/configuring-phpmyadmin.png){: w="400"}
 
 Samanlaisessa ruudussa seuraavaksi kysytään konfiguroidaanko dbconfig-common. **LUE KYSYMYS JA OHJE** ja valitse Yes.
 
@@ -418,18 +420,33 @@ Tietokannan nimeä ja käyttäjänimeä kysyttäessä voit käyttää oletusarvo
 
 Asennus lisää automaattisesti phpmyadminia varten konfiguraation Apache-http-palvelimen konfiguraatioon. Viimeinen temppu on ottaa PHP:ssä käyttöön mbstring-moduuli seuraavasti:
 
-```php
+```bash
 sudo phpenmod mbstring
 ```
 
 Lopuksi käynnistetään Apache vielä uudelleen jotta konffit tulevat voimaan:
 
-```php
+```bash
 sudo systemctl restart apache2
 ```
 
 Nyt phpmyadmin-kirjautumisruudun pitäisi löytyä osoitteesta http://127.0.0.1/phpmyadmin/ (ja vastaavasti isäntäkoneen selaimen kautta jos sieltä menet) ja sisään voi kirjautua käyttäjätunnuksella phpmyadmin ja antamallasi salasanalla.
 
 Nyt meillä on valmis web-palvelin jolla voidaan ajaa PHP-sovelluksia ja johon voidaan asentaa sisällönhallintajärjestelmiä kuten WordPress!
+
+**JOS phpmyadmin ei yllä olevassa osoitteessa toimi**, on asennuksen aikana mennyt jotakin mönkään ja helpointa on ottaa asennus uudelleen alusta asti. phphmyadminin poisto onnistuu seuraavasti:
+
+Poista phpmyadmin kokonaisuudessaan, mukaan lukien sen lataamat riippuvuudet (siksi sudo apt purge eikä sudo apt remove):
+
+```bash
+sudo apt purge phpmyadmin
+```
+
+Poista phpmyadminin konfiguraatiot seuraavilla komennoilla:
+
+```bash
+sudo rm -vf /etc/apache2/conf.d/phpmyadmin.conf
+sudo rm -vfR /usr/share/phpmyadmin
+```
 
 Lähde: [https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04)
