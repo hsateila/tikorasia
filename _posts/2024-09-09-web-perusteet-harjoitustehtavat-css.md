@@ -155,21 +155,21 @@ p + p em {
 
 Esimerkkejä miltä sivuston pitäisi suurin piirtein näyttää harjoituksen 35 jälkeen: [Kuva 1](../../assets/media/web-perusteet-css/ex35_1.png), [Kuva 2](../../assets/media/web-perusteet-css/ex35_2.png), [Kuva 3](../../assets/media/web-perusteet-css/ex35_3.png).
 
-### 24. Lisää semantiikkaa
+### 23. Lisää semantiikkaa
 
 Jos ei jo ole, niin nyt käytä elementtejä nav, header ja footer erottamaan sivuston nämä osiot. ```<header>```-elementin tulisi sisältää banneri ja pääotsikko, ```<nav>```sisältää linkkilistan ja ```<footer>```copyright-tiedot. Käytä div-elementtiä id:llä _content_ erottamaan toisen tason otsikot ja kappaleet muusta sisällöstä.
 
-### 25. Tausta navigaatiolle
+### 24. Tausta navigaatiolle
 
 Etsi jälleen sopiva taustakuva ja aseta se taustaksi ```<nav>```-osiolle. Asettele tämä taustakuva nav-elementin oikeaan yläkulmaan.
 
-### 26. Lisää spannia
+### 25. Lisää spannia
 
 Oletettakoon että haluat vahvistaa joitakin sanoja tai lauseita (esimerkiksi varoituksia) dokumentissasi, mutta **boldauksen** tai _italicin_ sijaan haluat tehdä niistä punaisia.
 
 Valitse dokumentistasi muutamia sanoja ja merkitse ne ```<span>```-elementillä. Virkistä sivu ja huomaat mahdollisesti että sinulla on ongelma. Voit ratkaista sen esimerkiksi luomalla luokat _dropcap_ ja _warning_ ja määritellä span-elementeille nämä luokat niille kuuluviin paikkoihin ja muokkaamalla tyylimäärityksiä siten että nämä kohdistuvat vain niihin span-elementteihin joilla on kyseinen luokka.
 
-### 27. Container-elementit
+### 26. Container-elementit
 
 #### Osa 1
 
@@ -195,13 +195,13 @@ Kun elementti tarvitsee tilaa ympärilleen sekä ulko- että sisäpuolelle, käy
 
 Ymmärtääksesi margin- ja padding-parametrit hyvin, sinun täytyy tuntea [CSS:n laatikkomalli eli CSS Box Model](https://www.w3schools.com/Css/css_boxmodel.asp).
 
-### 28. Reunaviivat ja täytteet
+### 27. Reunaviivat ja täytteet
 
 Aseta 1px kiiteä reunaviiva container-diville. Lisää myös padding samaan containeriin jotta saat sivulle hieman lisää ilmavuutta.
 
 Mikä on nyt container divin todellinen leveys? Hyödynnä selaintyökaluja tämän selvittämiseksi!
 
-### 29. Taulukot 2
+### 28. Taulukot 2
 
 Muokkaa dokumentissasi olevia taulukoita seuraavasti:
 
@@ -213,13 +213,13 @@ Muokkaa dokumentissasi olevia taulukoita seuraavasti:
 - Siirrä caption-teksti taulukon alaosaan
 - aseta marginaalit siten että captionin ylä- ja alapuolella on yhden rivin verran tilaa.
 
-### 30. Lisää reunaviivoja
+### 29. Lisää reunaviivoja
 
 Ympäröi tekstikappaleet kiinteällä 4 pikselin reunaviivalla (```solid 4px border```). "Sisennä" kappaleet siten että asetat vaaleamman värin yläreunaan ja vajostava värisivuille sekä tummempi alareunaan.
 
 Aseta padding sellaiseksi että se on kaksi kertaa fontin koko vasemmassa ja oikeassa reunassa, ja 1x juurielementin fonttikokoa vastaava padding kappaleiden ylä- ja alaosaan. Käytä [lyhennettyjä parametreja](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) marginille ja paddingille.
 
-### 31. Linkkejä pisterajauksella
+### 30. Linkkejä pisterajauksella
 
 Anna kaikille niille kuville, jotka ovat linkkejä, pistereunaviiva (dotted border). Jos olet edennyt harjoituksen mukaan, näitä kuvia on vain yksi. Käytä kuitenkin yleistä parametria valitsemalla jälkeläinen. Jätä kuvan ja reunaviivan hieman tilaa sekä sisä- että ulkopuolelle (margin, ja padding).
 
@@ -233,7 +233,7 @@ Monilla HTML-elementeillä on niihin liittyviä erikoistiloja. Esimerkiksi linkk
 
 **Rakenteelliset pseudoluokat:** pseudoluokat muistuttavat rakenteeltaan yhdistelmävalitsimia kun valitaan elementtien sisaruksia, mutta sallivat elementtien tyylittelyn joka perustuu joko täsmällisesti annettuun tai laskettuun sijaintiin. [Rakenteellisen pseudoluokan](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) avulla voi muodostaa selectorin jolla päästään käsiksi HTML-elementteihin rakenteessa käyttämällä vaikkapa pseudoluokkaa ```:last-child```, joka valitsee elementin viimeisen jälkeläisen.
 
-### 32. Linkit pseudoluokilla
+### 31. Linkit pseudoluokilla
 
 Lisää tyylimääritykset dokumentin linkeille. Varmista että määrittelet seuraavat pseudoluokat:
 
@@ -243,11 +243,11 @@ Lisää tyylimääritykset dokumentin linkeille. Varmista että määrittelet se
 - focus
 - visited
 
-### 33. Pseudoluokka kuviin
+### 32. Pseudoluokka kuviin
 
 Aiemmin lisäsit pisteviivan niihin kuviin jotka toimivat myös linkkinä. Lisää nyt hover -pseudoluokka joka muuttaa pistereunaviivat kiinteiksi reunaviivoiksi ja näyttää reunaviivan pelkästään ylä- ja alareunassa kun käyttäjä vie hiiren kuvan päälle.
 
-### 34. Rakenteelliset pseudoluokat
+### 33. Rakenteelliset pseudoluokat
 
 Lisää [rakenteellinen pseudoluokka](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) niin, että oikeanpuoleisimmat taulukon solut jokaisessa taulukossa on varustettu punaisella taustavärillä. Pyri tekemään tämä niin ettet tee muutoksia HTML-koodiin, vaan tee toteutus puhtaasti CSS-selectoreilla ja tyyleillä.
 
@@ -276,7 +276,7 @@ Normaalin DOM:n (eli HTML-dokumentin) renderöintijärjestyksen voi CSS:n avulla
 
 Tsekkaa [CSS-positioning 101](http://www.alistapart.com/articles/css-positioning-101/) ja [CSS positioning in 10 steps](http://www.barelyfitz.com/screencast/html-training/css/positioning/).
 
-### 35. Disclaimer näkysälle
+### 34. Disclaimer näkysälle
 
 Lisää seuraavanlainen HTML-snippet verkkosivullesi ```header```- ja ```<nav>```-osioiden väliin. Lisää myös alempaa löytyvä tyylimäärittely CSS-tiedostoosi.
 
@@ -307,11 +307,11 @@ Nulla tristique lobortis sapien eu condimentum.
 }
 ```
 
-### 36. Kelluvat kuvat
+### 35. Kelluvat kuvat
 
 Seuraavaksi kääri teksti huutomerkkikuvan kanssa [esimerkin](../../assets/media/web-perusteet-css/disclaimer_wrap.png) mukaisesti. Homman pitäisi luonnistua suhteellisen helposti ```float```-propertyn avulla. Lisää myös hieman täytettä (padding) oikealle puolelle kuvaa.
 
-### 37. Kelluvat kuvat, osa 2
+### 36. Kelluvat kuvat, osa 2
 
 Laita teksti kääriytymään linkin sisältävän kuvan ympärille, samaan tapaan kuin edellisessä harjoituksessa paitsi että sijoita kuva tällä kertaa oikealle. Lisähaasteena muokkaa koodia seuraavasti:
 
@@ -323,19 +323,19 @@ Laita teksti kääriytymään linkin sisältävän kuvan ympärille, samaan tapa
 ```
 Tämä tarkoittaa että sinun täytyy siirtää linkki, jossa kuva on, yhden yksittäisen ```p```-elementin sisään. **Jos sinulla ei ole kuvaa jossa on linkki, käytä yllä olevaa koodia sellaisenaan.**
 
-### 38. Absoluuttinen sijoitus (absolute positioning)
+### 37. Absoluuttinen sijoitus (absolute positioning)
 
 Siirrä nav-blokki lähelle vasenta yläkulmaa. Käytä _absoluuttista sijoittamista (absolute positioning)_. Poista sisällöstä vasen ja oikea margianali. Esimerkki [tässä](../../assets/media/web-perusteet-css/abs_nav.png). Pohdi missä tilanteissa absoluuttinen sijoittaminen selainikkunan suhteen voisi olla hyvä käytäntö?
 
-### 39. Palataan kiinteään sijoitukseen (fixed positioning)
+### 38. Palataan kiinteään sijoitukseen (fixed positioning)
 
 Muuta position-propertyn arvoksi ```fixed```. Miten tilanne muuttui? Milloin tulisi käyttää kiinteää (fixed) sijoitusta?
 
-### 40. Display -propertyt ja arvot
+### 39. Display -propertyt ja arvot
 
 Muuta CSS näyttämään listaelementit nav-blokissa yhdellä viivalla (vinkki: tutki miten display-property toimii) ja pienennä fontin kokoa.
 
-### 41. Pseudoluokat ja sisältö CSS:n kautta
+### 40. Pseudoluokat ja sisältö CSS:n kautta
 
 Luo CSS-määrittelyt (käytä pseudoluokkia) jotka automaattisesti lisäävät " *** " ennen jokaista listaelementtiä ja saman merkkijonon viimeisen elementin jälkeen (navigaatioblokki näyttäisi jotakuinkin tältä: ```*** First Chapter *** Second Chapter *** Third Chapter ***```). Vihje: Selvitä miten ```content```-property toimii.
 
@@ -343,15 +343,15 @@ Aseta leveys siten että navigaatio asettuu koko sivun leveydelle samalle rivill
 
 Katso [esimerkki](../../assets/media/web-perusteet-css/nav_bottom_fixed.png)
 
-### 42. Piilota asioita tulostusta varten
+### 41. Piilota asioita tulostusta varten
 
 Kirjoita CSS-määrittely joka piilottaa disclaimer-osion kun sivua tulostetaan. Tämä ominaisuus on hyödyllinen jos sinun tarvitsee muotoilla sivua varten tulostinystävällinen tyyli: voit helposti piilottaa mainoksia, navigaatiot ja muut vastaavat tulostusversiosta. Voit tarkistaa lopputuloksen käyttämällä selaimen sivun tulostuksen esikatselua.
 
-### 43. Suomen ja Jyväskylän kartta
+### 42. Suomen ja Jyväskylän kartta
 
 Sisällytä sivulle Suomen kartta (saat tiedoston [tästä](../../assets/media/web-perusteet-css/finland.jpg).) ja sijoita teksti Jyväskylä dokumentille. Siirrä "Jyväskylä" -teksti kartan päälle suurin piirtein sinne minne se kuuluu. Tutki hieman miten suhteellinen sijoitus (relative positioning) toimii jotta saat tekstin oikealle paikalle kuvan päälle.
 
-### 44. Under construction, tulossa pian
+### 43. Under construction, tulossa pian
 
 Aseta [min-width](http://css-tricks.com/almanac/properties/m/min-width/)-property container-diville. Lisää [rakennustyömaakuva](../../assets/media/web-perusteet-css/construction.gif) juuri container-divin alle ja anna tälle elementille uniikki id. Rakennustyömaakuvan tulisi pysyä container-divin oikeassa yläkulmassa myös silloin kun selainikkunan kokoa muutetaan. Tämä vaatii absoluuttisen sijoituksen (absolute positioning) käyttöä suhteellisen sijoituksen (relative positioning) sisällä.
 
