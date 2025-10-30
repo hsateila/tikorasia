@@ -60,7 +60,7 @@ renderöi laatikon jonka leveys on 370 pikseliä.
 
 näyttäisi laatikon jonka leveys on 350 pikseliä, mutta itse sisältölaatikon koko olisi tällöin 330px.
 
-#### 45. Valmistautuminen responsiivisen suunnittelun harjoituksiin
+#### 44. Valmistautuminen responsiivisen suunnittelun harjoituksiin
 
 Lataa [rwdex.zip](https://tiko.jamk.fi/~hsateila/files/rwdex.zip) ja pura se. Voit purkaa tämän vaikkapa omaan kansioonsa harjoitustyökansiosi alle. Paketti sisältää yksinkertaisen verkkosivun johon on rakennettu **_mobile first_** -tyyppinen asettelu. Tehtäväsi on luoda responsiivinen verkkosivu määrittelyjen mukaisesti ja niiden asetteluiden mukaan mitkä on annettu alla olevissa kuvissa. Saat neljä media querya joihin sinun on tehtävä tarvittavat muutokset.
 
@@ -70,7 +70,7 @@ Oletusasetteluillaan sivu näyttää tältä:
 
 ![RWD-esimerkki ja malli](rwd-example-1.png){: width="200" }
 
-#### 46. 564px
+#### 45. 564px
 
 Alta näet esimerkkikuvat mihin tulisi pyrkiä. Viewportin eli näkymän leveys on asetettu 650px.
 
@@ -86,7 +86,7 @@ Alta näet esimerkkikuvat mihin tulisi pyrkiä. Viewportin eli näkymän leveys 
 - Listaelementeille jotka sijaitsevat nav-elementin sisällä: lisää 0.5rem padding ylä- ja alaosaan ja 0 padding vasempaan ja oikeaan reunaan. Käytä :hover -pseudoluokkaa muuttaaksesi listaelementin taustavärin vaaleammaksi kun hiiri on ao. listaelementin päällä.
 - Keskitä kaikki kuvat omien elementtiensä sisällä.
 
-#### 47. 700px
+#### 46. 700px
 
 Esimerkkikuvat jälleen alla sen suhteen mihin pyritään. Viewportin leveys asetetaan 750px.
 
@@ -99,7 +99,7 @@ Kuvat ovat liian suuria näyttöön, on syytä skaalata niitä pienemmiksi ja ke
 - Luo media query joka astuu voimaan kun sivu on leveämpi kuin 700 pikseliä.
 - Käytä ```float: left;``` ja ```float: right;``` -propertyja niitä vastaaville luokille ja aseta kuvien leveys 45%.
 
-#### 48. 850px
+#### 47. 850px
 
 Ja esimerkkikuvat taas alla. Viewportin leveys 1200px.
 
@@ -125,7 +125,7 @@ Käy läpi tutoriaalit [Flexbox](https://scrimba.com/g/gflexbox):lle ja [CSS Gri
 > **CSS Grid** on toinen erittäin käyttökelpoinen ja varmasti vastaan tuleva asia, ja tästä on olemassa samantyyppinen hieno lunttilappu: [CSS Grid Layout Guide](https://css-tricks.com/snippets/css/complete-guide-grid/). Lisää kirjanmerkkeihin tämäkin!
 {: .prompt-info}
 
-#### 49. Flexboxin ja CSS Gridin konseptien esittelyä pelien avulla
+#### 48. Flexboxin ja CSS Gridin konseptien esittelyä pelien avulla
 
 Pelaa ja läpäise seuraavat pelit:
 
@@ -133,7 +133,7 @@ Pelaa ja läpäise seuraavat pelit:
 - [Flexbox Defence](http://www.flexboxdefense.com/)
 - [CSS Grid Garden](https://cssgridgarden.com/)
 
-#### 50. Uusi projekti ja uusi HTML5-tehtävä
+#### 49. Uusi projekti ja uusi HTML5-tehtävä
 
 Aloita uusi projekti ja kopioi esimerkkinä toimiva XHTML-koodi [tältä sivulta](https://tiko.jamk.fi/~hsateila/materiaalit/recipesite/recipes.html) ja lisää se recipes.html -nimiseen tiedostoon projektiisi. XHTML on vanhempi HTML-standardi ajalta ennen HTML5:ta ja nyt modernisoidaan tämä dokumentti.
 
@@ -143,7 +143,7 @@ Aloita uusi projekti ja kopioi esimerkkinä toimiva XHTML-koodi [tältä sivulta
 - Vaihda divit, jotka toimivat nyt sectioneina, HTML5-elementeiksi ([tässä hieman muistin virkistystä semantiikasta](https://html5forwebdesigners.com/semantics/index.html))
 - Validoi koodi ja korjaa validointivirheet tarvittaessa.
 
-#### 51. "A weird flex, but ok"
+#### 50. "A weird flex, but ok"
 
 Käytä Flexboxia ja lisää hieman responsiivisuutta sivun mainoksiin! Kuvien tulisi pysyä samalla rivillä kunnes tilaa ei enää ole. Tämän jälkeen niiden tulisi "wrappaytyä". Lisää marginaalia mainoksille flex-containerin sisään. Käytä jälkeläisselectoreita!
 
@@ -161,7 +161,7 @@ Esimerkkikuvat alla:
 
 ![Esimerkki 3](weird-flex-3.png)
 
-#### 52. Kuvat ruudukossa (eli gridissä!)
+#### 51. Kuvat ruudukossa (eli gridissä!)
 
 ##### Osa 1
 
