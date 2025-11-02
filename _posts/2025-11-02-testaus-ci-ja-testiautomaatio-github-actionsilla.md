@@ -121,6 +121,10 @@ jobs:
     - run: npm test
 ```
 
-Kun teet näillä commitin, voit seurata Githubin repositorion sivulla Actions testien etenemistä. Jos olet noudattant tätä ohjetta (ohjelmistossa oli täsmälleen se laskimen testausympäristö mihin Vitest-ympäristön ohje päättyi) ja testeissä oli lähtökohtaisesti yksi virhe ja yksi onnistunut, tämä aiheuttaa sen, että kaikkien node-ympäristöjen testit epäonnistuvat. Yksi niistä ajetaan ja loput jätetään ajamatta koska yksi epäonnistui.
+Kun teet näillä commitin, voit seurata Githubin repositorion sivulla Actions testien etenemistä. Jos olet noudattant tätä ohjetta (ohjelmistossa oli täsmälleen se laskimen testausympäristö mihin Vitest-ympäristön ohje päättyi ILMAN että korjasit koodissa olevaa esimerkkivirhettä) ja testeissä oli lähtökohtaisesti yksi virhe ja yksi onnistunut, tämä aiheuttaa sen, että kaikkien node-ympäristöjen testit epäonnistuvat. Yksi niistä ajetaan ja loput jätetään ajamatta koska yksi epäonnistui.
 
 Korjaa seuraavaksi koodissa mahdollisesti olevat virheet jotka aiheuttavat testien epäonnistumisen. Tämän jälkeen kun teet commitin, testit ajetaan automaattisesti ja sinulle pitäisi tulla vihreä lätkä kun kaikki testit menevät läpi.
+
+> **BONUS!**
+Anna luomasi `yksikkotestit.yml` valitsemallesi tekoälytyökalulle ja pyydä sitä selittämään rivi riviltä mitä kukin konfiguraatiorivi tarkoittaa.
+{: .prompt-info}
