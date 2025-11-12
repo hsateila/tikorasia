@@ -3,7 +3,8 @@ layout: post
 title: Testaussuunnitelmapohja
 date: 2025-10-30 18:14 +0200
 categories: [Opintojaksot, Testaus]
-image: /assets/media/testaussuunnitelmapohja/software-testing-cover.jpg
+media_subpath: /assets/media/testaus/
+image: software-testing-cover.jpg
 ---
 
 # Testaussuunnitelman yksinkertainen esimerkkipohja

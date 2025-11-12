@@ -3,7 +3,7 @@ layout: post
 title: 'Testaus: CI ja testiautomaatio Github Actionsilla'
 date: 2025-11-02 16:41 +0200
 categories: [Opintojaksot, Testaus]
-media_subpath: /assets/media/testaus-ci/
+media_subpath: /assets/media/testaus/
 image: testaus-ci-cover.jpg
 ---
 # Ohjelmiston testaus automatisoidusti: Git, Github ja Github Actions
