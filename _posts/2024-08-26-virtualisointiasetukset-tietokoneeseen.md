@@ -12,21 +12,22 @@ Microsoft-windows -isäntäkoneissa, eli läppärilläsi jossa on käytössä Mi
 
 1. Avaa PowerShell ylläpitäjän käyttöoikeuksilla Käynnistä -valikosta
 2. Aja seuraava komento
-        ```powershell
-        Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
-        ```
+
+```powershell
+Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
+```
 
 3. Aja seuraava komento
 
-        ```powershell
-        dism.exe /Online /Disable-Feature:Microsoft-Hyper-V
-        ```
+```powershell
+dism.exe /Online /Disable-Feature:Microsoft-Hyper-V
+```
 
 4. Aja seuraava komento
 
-        ```powershell
-        bcedit /set hypervisorlaunchtype off
-        ```
+```powershell
+bcedit /set hypervisorlaunchtype off
+```
 
 Jos saat virheilmoituksen joka kertoo jotakin tyyliin "Windows can’t recognize the feature hyper-v", ei hätää. Aja vain muutkin komennot ohjeen mukaan. Tämä johtuu Windowsin vnahasta Hyper-V ja WSL2-tuesta, mutta se ei ole ongelma.
 
@@ -53,27 +54,27 @@ Kun olet saanut tehtävät tehtyä ja hyväksyttyä, tee seuraavat temput jotta 
 1. Avaa PowerShell hallintakäyttäjän oikeuksilla Käynnistä-valikosta
 2. Aja seuraava komento
 
-        ```powershell
-        Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
-        ```
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
+```
 
 3. Aja seuraava komento
 
-        ```powershell
-        dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /all /norestart
-        ```
+```powershell
+dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /all /norestart
+```
 
 4. Aja seuraava komento
 
-        ```powershell
-        dism.exe /Online /Enable-Feature /featurename:VirtualMachinePlatform /all /norestart
-        ```
+```powershell
+dism.exe /Online /Enable-Feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
 5. Aja seuraava komento
 
-        ```powershell
-        bcdedit /set hypervisorlaunchtype auto
-        ```
+```powershell
+bcdedit /set hypervisorlaunchtype auto
+```
 
 6. Käynnistä tietokone uudelleen.
 
