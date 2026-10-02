@@ -83,7 +83,7 @@ You'll get a notification that symlink has been created.
 
 Now you can test that the HTTP server actually is running. Fire up the browser within the virtual machine (Firefox, Chrome, Chromium) and write "localhost" on the address line. You should get the following page:
 
-![Fedora test server page](./assets/media/fedora-http-server-page.png){: w="400"}
+![Fedora test server page](./assets/media/operating-systems-lamp-stack/phpmyadmin-login-screen.png){: w="400"}
 
 **That confirms that Apache HTTP server has been installed and working on Fedora. Congrats!** You can verify that server actually starts after reboot by rebooting the VM and then checking with a browser that localhost still opens the above page.
 

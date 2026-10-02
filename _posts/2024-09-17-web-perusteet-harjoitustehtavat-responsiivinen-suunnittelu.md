@@ -130,7 +130,7 @@ Käy läpi tutoriaalit [Flexbox](https://scrimba.com/g/gflexbox):lle ja [CSS Gri
 Pelaa ja läpäise seuraavat pelit:
 
 - [Flexbox Froggy](https://flexboxfroggy.com/)
-- [Flexbox Defence](http://www.flexboxdefense.com/)
+- [Flexbox Defence](https://www.flexboxdefense.com/)
 - [CSS Grid Garden](https://cssgridgarden.com/)
 
 #### 49. Uusi projekti ja uusi HTML5-tehtävä

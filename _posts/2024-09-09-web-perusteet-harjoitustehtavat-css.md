@@ -63,7 +63,7 @@ Luo myös pystysuora liukuväritausta tekstikappaleille. Voit tehdä liukuvärit
 
 CSS3:n avulla voi tehdä liukuvärin suoraankin. Voit etsiä tähän ohjeet nyt, mutta tähän palataan myöhemminkin.
 
-Lisätietoa taustan ominaisuuksista löydät täältä: [Background properties](http://www.tizag.com/cssT/background.php).
+Lisätietoa taustan ominaisuuksista löydät täältä: [Background properties](https://www.tizag.com/cssT/background.php).
 
 ### 22. Värien määrittely
 
@@ -205,7 +205,7 @@ Mikä on nyt container divin todellinen leveys? Hyödynnä selaintyökaluja täm
 
 Muokkaa dokumentissasi olevia taulukoita seuraavasti:
 
-- Lisää [```<caption>```-elementti](http://www.w3schools.com/tags/tag_caption.asp) jokaiselle taulukolle.
+- Lisää [```<caption>```-elementti](https://www.w3schools.com/tags/tag_caption.asp) jokaiselle taulukolle.
 - Aseta jokaiselle taulukolle oma taustakuva
 - Aseta taulukon taustaväri erikseen sekä parittomille että parillisille riveille
 - Pienennä caption-tekstin kokoa (käytä prosenttia yksikkönä, esimerkiksi 75%)
@@ -274,7 +274,7 @@ Lue seuraavat tutoriaalit:
 
 Normaalin DOM:n (eli HTML-dokumentin) renderöintijärjestyksen voi CSS:n avulla muuttaa. On erilaisia tapoja muuttaa elementtien ja blokkien sijaintia, esimerkiksi [float](https://www.w3schools.com/css/css_float.asp) ja [position](https://www.w3schools.com/Css/css_positioning.asp) -propertyt. CSS3 tarjoaa myös gridin ja flexboxin tähän tarkoitukseen, ja ne ovatkin varsin olennaisia, mutta palaamme niihin myöhemmin.
 
-Tsekkaa [CSS-positioning 101](http://www.alistapart.com/articles/css-positioning-101/) ja [CSS positioning in 10 steps](http://www.barelyfitz.com/screencast/html-training/css/positioning/).
+Tsekkaa [CSS-positioning 101](https://www.alistapart.com/articles/css-positioning-101/) ja [CSS positioning in 10 steps](https://www.barelyfitz.com/screencast/html-training/css/positioning/).
 
 ### 34. Disclaimer näkysälle
 
@@ -353,6 +353,6 @@ Sisällytä sivulle Suomen kartta (saat tiedoston [tästä](../../assets/media/w
 
 ### 43. Under construction, tulossa pian
 
-Aseta [min-width](http://css-tricks.com/almanac/properties/m/min-width/)-property container-diville. Lisää [rakennustyömaakuva](../../assets/media/web-perusteet-css/construction.gif) juuri container-divin alle ja anna tälle elementille uniikki id. Rakennustyömaakuvan tulisi pysyä container-divin oikeassa yläkulmassa myös silloin kun selainikkunan kokoa muutetaan. Tämä vaatii absoluuttisen sijoituksen (absolute positioning) käyttöä suhteellisen sijoituksen (relative positioning) sisällä.
+Aseta [min-width](https://css-tricks.com/almanac/properties/m/min-width/)-property container-diville. Lisää [rakennustyömaakuva](../../assets/media/web-perusteet-css/construction.gif) juuri container-divin alle ja anna tälle elementille uniikki id. Rakennustyömaakuvan tulisi pysyä container-divin oikeassa yläkulmassa myös silloin kun selainikkunan kokoa muutetaan. Tämä vaatii absoluuttisen sijoituksen (absolute positioning) käyttöä suhteellisen sijoituksen (relative positioning) sisällä.
 
 Esimerkit: [Kuva 1](../../assets/media/web-perusteet-css/construction_1.png) ja [Kuva 2](../../assets/media/web-perusteet-css/construction_2.png)
