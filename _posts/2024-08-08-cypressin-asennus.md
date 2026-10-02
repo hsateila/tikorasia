@@ -11,7 +11,7 @@ media_subpath: /assets/media/cypressin-asennus
 Kansion nimi voi olla vaikkapa testausharkat-end-to-end. Aja terminaalilla tässä hakemistossa komento
 
 ```bash
-npm init y
+npm init -y
 ```
 
 Vaihtoehtoisesti, jos työskentelet samassa hakemistossa kuin mihin teit aiemmin yksikkötestauksen tehtävät, sinun ei tarvitse alustaa uutta node-projektia npm:n avulla. Tällöin luot uuden hakemiston Cypressiä varten ja ajat komentorivillä komennon
@@ -43,7 +43,9 @@ Voit jatkaa vain painamalla alareunasta "Continue".
 
 ## 5. Tämän jälkeen valitse haluamasi selain
 
-Cypress tarjoaa oletusarvoisesti Chromea tai Electronia sekä mahdollisesti muita selaimia joita on asennettuna. Kummankin pitäisi toimia, mutta Electron on selaimen sijasta sovelluskehys (framework), jolla voidaan rakentaa itsenäisiä työpöytäsovelluksia käyttäen samoja web-teknologioita millä selainpohjaisia sovelluksiakin rakennetaan.
+Cypress tarjoaa oletusarvoisesti Chromea tai Electronia sekä mahdollisesti muita selaimia joita on asennettuna. Kummankin pitäisi toimia, mutta Electron on selaimen sijasta sovelluskehys (framework), jolla voidaan rakentaa itsenäisiä työpöytäsovelluksia käyttäen samoja web-teknologioita millä selainpohjaisia sovelluksiakin rakennetaan. 
+
+Electron on deprecated-tilassa joten valitse jokin yhteensopiva ja asennettuna oleva selain, jolla testit tehdään. Chrome käy hyvin.
 
 ## 6. Jos kaikki meni oikein, Cypress avautuu valitsemallasi selaimella
 
