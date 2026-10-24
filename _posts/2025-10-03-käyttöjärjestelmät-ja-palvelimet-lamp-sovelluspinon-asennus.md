@@ -184,7 +184,7 @@ mysql>
 Aja tässä komentokehotteessa seuraava komento, **mutta korvaa komennossa sana password haluamallasi salasanalla** (juurikäyttäjälle annettava salasana) j**a tallenna se itsellesi:**
 
 ```bash
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';
 ```
 
 Jos onnistui, saat tulosteen `Query OK, 0 rows affected (0.00 sec)`
