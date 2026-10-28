@@ -1,8 +1,8 @@
 {
   "name": "Jekyll (Chirpy)",
-  // Pinned base image: Ruby 3.3 on Debian bookworm. Gems install as the
+  // Pinned base image: Ruby 3.4 on Debian trixie. Gems install as the
   // non-root "vscode" user, so no permission issues with bundle install.
-  "image": "mcr.microsoft.com/devcontainers/ruby:1-3.3-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.4-trixie",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22"
